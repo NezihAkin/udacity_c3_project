@@ -1,9 +1,21 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV, train_test_split
 import os
 import pickle
 
+from ml.data import process_data
+
+cat_features = [
+    "workclass",
+    "education",
+    "marital-status",
+    "occupation",
+    "relationship",
+    "race",
+    "sex",
+    "native-country",
+]
 
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
@@ -85,19 +97,59 @@ def inference(model, X):
 
     return preds
 
-def save_model(filename, current_dir, file):
+def save_model(filename, file):
     """ Saves model or encoders as a pickle file to model folder.
 
     Inputs
     ------
     filename : str
         Name of the file.
-    current_dir : str
-        path of current directory
     file : pickle
         file to be saved as pickle (either model or encoder)
     """
 
-    path = os.path.join(current_dir, '../model', filename)
+    path = os.path.join('starter/model', filename)
     with open(path, 'wb') as save_file:
         pickle.dump(file, save_file)
+
+def calculate_performance_slicing(df, feature, model, encoder, lb):
+    """ Calculates performance metrics on slices of categorical features.
+
+    Inputs
+    ------
+    df: pd.DataFrame
+        Training data
+    feature : str
+        List of the names of categorical features
+    model : RandomForestClassifier
+        Trained model
+    encoder : OneHotEncoder
+        Encoder for categorical variables
+    lb : LabelBinarizer
+        Label Binarizer
+    """
+
+    print(f'Feature: {feature}', '\n')
+    with open(f'starter/screenshots/slice_output_{feature}.txt','w') as f:
+        for value in df[feature].unique():
+            df_temp = df[df[feature]==value]
+            _, test = train_test_split(df_temp, test_size=0.20)
+
+            X_test, y_test, encoder, lb = process_data(
+                test, categorical_features=cat_features, label="salary", training=False, encoder=encoder, lb=lb
+            )
+
+            # Calculate predictions for X_test
+            preds = inference(model, X_test)
+
+            # Calculate performance metrics for the model
+            precision, recall, fbeta = compute_model_metrics(y_test, preds)
+
+            print(f'Precision for {value}: {precision}')
+            print(f'Recall for {value}: {recall}')
+            print(f'Fbeta for {value}: {fbeta}')
+
+            # save to a txt file
+            lines = [f'Feature: {feature}','\n', f'Precision for {value}: {precision}','\n' f'Recall for {value}: {recall}','\n' f'Fbeta for {value}: {fbeta}']
+            
+            f.writelines(lines)
