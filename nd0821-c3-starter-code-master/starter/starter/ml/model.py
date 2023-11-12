@@ -1,6 +1,8 @@
 from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
+import os
+import pickle
 
 
 # Optional: implement hyperparameter tuning.
@@ -82,3 +84,20 @@ def inference(model, X):
     preds = model.predict(X)
 
     return preds
+
+def save_model(filename, current_dir, file):
+    """ Saves model or encoders as a pickle file to model folder.
+
+    Inputs
+    ------
+    filename : str
+        Name of the file.
+    current_dir : str
+        path of current directory
+    file : pickle
+        file to be saved as pickle (either model or encoder)
+    """
+
+    path = os.path.join(current_dir, '../model', filename)
+    with open(path, 'wb') as save_file:
+        pickle.dump(file, save_file)

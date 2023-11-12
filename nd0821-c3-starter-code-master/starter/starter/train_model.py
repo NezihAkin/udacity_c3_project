@@ -1,11 +1,10 @@
 # Script to train machine learning model.
 
 import os
-import pickle
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from starter.starter.ml.data import process_data
-from starter.starter.ml.model import train_model
+from starter.starter.ml.model import train_model, save_model
 
 
 # Get the path to the census dataset
@@ -40,12 +39,8 @@ X_test, y_test, encoder_test, lb_test = process_data(
 model = train_model(X_train, y_train)
 #Save the model in model folder
 model_filename = 'random_forest_model.pkl'
-model_path = os.path.join(current_dir, '../model', model_filename)
-with open(model_path, 'wb') as model_file:
-    pickle.dump(model, model_file)
+save_model(model_filename, current_dir, model)
 
 # Save encoder in model folder
 encoder_filename = 'encoder.pkl'
-encoder_path = os.path.join(current_dir, '../model', encoder_filename)
-with open(encoder_path, 'wb') as encoder_file:
-    pickle.dump(encoder, encoder_file)
+save_model(encoder_filename, current_dir, encoder)
