@@ -50,6 +50,9 @@ preds = inference(model, X_test)
 
 # Calculate performance metrics for the model
 precision, recall, fbeta = compute_model_metrics(y_test, preds)
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F-Beta: {fbeta}')
 
 # Calculate sliced data performances for occupation
 calculate_performance_slicing(data, 'occupation', model, encoder, lb) 

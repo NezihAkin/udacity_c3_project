@@ -1,43 +1,43 @@
 Feature: occupation
-Precision for Adm-clerical: 0.8372093023255814
-Recall for Adm-clerical: 0.35294117647058826
-Fbeta for Adm-clerical: 0.49655172413793114Feature: occupation
-Precision for Exec-managerial: 0.8466257668711656
-Recall for Exec-managerial: 0.6831683168316832
-Fbeta for Exec-managerial: 0.7561643835616438Feature: occupation
-Precision for Handlers-cleaners: 0.3333333333333333
-Recall for Handlers-cleaners: 0.05555555555555555
-Fbeta for Handlers-cleaners: 0.09523809523809525Feature: occupation
-Precision for Prof-specialty: 0.780281690140845
-Recall for Prof-specialty: 0.7673130193905817
-Fbeta for Prof-specialty: 0.7737430167597766Feature: occupation
-Precision for Other-service: 0.6
-Recall for Other-service: 0.2222222222222222
-Fbeta for Other-service: 0.32432432432432434Feature: occupation
-Precision for Sales: 0.7671232876712328
-Recall for Sales: 0.5410628019323671
-Fbeta for Sales: 0.6345609065155807Feature: occupation
-Precision for Craft-repair: 0.7619047619047619
-Recall for Craft-repair: 0.2376237623762376
-Fbeta for Craft-repair: 0.3622641509433962Feature: occupation
-Precision for Transport-moving: 0.9166666666666666
-Recall for Transport-moving: 0.2894736842105263
-Fbeta for Transport-moving: 0.43999999999999995Feature: occupation
-Precision for Farming-fishing: 0.6428571428571429
-Recall for Farming-fishing: 0.391304347826087
-Fbeta for Farming-fishing: 0.4864864864864865Feature: occupation
-Precision for Machine-op-inspct: 0.5833333333333334
-Recall for Machine-op-inspct: 0.16666666666666666
-Fbeta for Machine-op-inspct: 0.25925925925925924Feature: occupation
-Precision for Tech-support: 0.92
-Recall for Tech-support: 0.42592592592592593
-Fbeta for Tech-support: 0.5822784810126582Feature: occupation
-Precision for ?: 0.8181818181818182
-Recall for ?: 0.45
-Fbeta for ?: 0.5806451612903226Feature: occupation
-Precision for Protective-serv: 0.8947368421052632
-Recall for Protective-serv: 0.3953488372093023
-Fbeta for Protective-serv: 0.5483870967741935Feature: occupation
+Precision for Adm-clerical: 0.6086956521739131
+Recall for Adm-clerical: 0.3218390804597701
+Fbeta for Adm-clerical: 0.42105263157894735Feature: occupation
+Precision for Exec-managerial: 0.8606811145510835
+Recall for Exec-managerial: 0.7183462532299741
+Fbeta for Exec-managerial: 0.7830985915492958Feature: occupation
+Precision for Handlers-cleaners: 0.5
+Recall for Handlers-cleaners: 0.25
+Fbeta for Handlers-cleaners: 0.3333333333333333Feature: occupation
+Precision for Prof-specialty: 0.8156424581005587
+Recall for Prof-specialty: 0.7684210526315789
+Fbeta for Prof-specialty: 0.7913279132791328Feature: occupation
+Precision for Other-service: 0.6666666666666666
+Recall for Other-service: 0.125
+Fbeta for Other-service: 0.21052631578947367Feature: occupation
+Precision for Sales: 0.7538461538461538
+Recall for Sales: 0.5104166666666666
+Fbeta for Sales: 0.6086956521739131Feature: occupation
+Precision for Craft-repair: 0.75
+Recall for Craft-repair: 0.24615384615384617
+Fbeta for Craft-repair: 0.3706563706563707Feature: occupation
+Precision for Transport-moving: 0.8947368421052632
+Recall for Transport-moving: 0.2463768115942029
+Fbeta for Transport-moving: 0.38636363636363635Feature: occupation
+Precision for Farming-fishing: 0.5
+Recall for Farming-fishing: 0.3076923076923077
+Fbeta for Farming-fishing: 0.380952380952381Feature: occupation
+Precision for Machine-op-inspct: 0.9166666666666666
+Recall for Machine-op-inspct: 0.2391304347826087
+Fbeta for Machine-op-inspct: 0.3793103448275862Feature: occupation
+Precision for Tech-support: 0.9310344827586207
+Recall for Tech-support: 0.4576271186440678
+Fbeta for Tech-support: 0.6136363636363636Feature: occupation
+Precision for ?: 0.6521739130434783
+Recall for ?: 0.4838709677419355
+Fbeta for ?: 0.5555555555555556Feature: occupation
+Precision for Protective-serv: 0.6521739130434783
+Recall for Protective-serv: 0.4166666666666667
+Fbeta for Protective-serv: 0.5084745762711865Feature: occupation
 Precision for Armed-Forces: 1.0
 Recall for Armed-Forces: 1.0
 Fbeta for Armed-Forces: 1.0Feature: occupation
