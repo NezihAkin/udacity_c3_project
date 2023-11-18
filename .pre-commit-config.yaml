@@ -1,3 +1,4 @@
+files: ^starter/
 repos:
   - repo: local
     hooks:
@@ -22,7 +23,6 @@ repos:
         args:
           - --max-line-length
           - *line_length
-          - --docstring-convention=google
           - --ignore=D100,D202,D104,D205,D201,D212,W503,W605,E712,E731,E501
   # D100 requires all Python files (modules) to have a "public" docstring even if all functions within have a docstring.
   # D104 requires __init__ files to have a docstring

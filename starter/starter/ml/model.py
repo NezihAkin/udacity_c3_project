@@ -1,10 +1,10 @@
-from sklearn.metrics import fbeta_score, precision_score, recall_score
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV, train_test_split
 import os
 import pickle
 
 from ml.data import process_data
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import fbeta_score, precision_score, recall_score
+from sklearn.model_selection import GridSearchCV, train_test_split
 
 cat_features = [
     "workclass",
@@ -16,6 +16,7 @@ cat_features = [
     "sex",
     "native-country",
 ]
+
 
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
@@ -34,19 +35,21 @@ def train_model(X_train, y_train):
         Trained machine learning model.
     """
 
-    # Define the parameter grid 
+    # Define the parameter grid
     param_grid = {
-        'n_estimators': [100, 200],
-        'max_depth': [5, 10],
-        'min_samples_split': [2, 5],
-        'min_samples_leaf': [2, 4]
+        "n_estimators": [100, 200],
+        "max_depth": [5, 10],
+        "min_samples_split": [2, 5],
+        "min_samples_leaf": [2, 4],
     }
 
     # Create RandomForestClassifier instance
     rf_classifier = RandomForestClassifier(random_state=42)
 
     # Create GridSearchCV instance
-    grid_search = GridSearchCV(estimator=rf_classifier, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2)
+    grid_search = GridSearchCV(
+        estimator=rf_classifier, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2
+    )
 
     # Fit hyperparameter tuning
     grid_search.fit(X_train, y_train)
@@ -80,7 +83,7 @@ def compute_model_metrics(y, preds):
 
 
 def inference(model, X):
-    """ Run model inferences and return the predictions.
+    """Run model inferences and return the predictions.
 
     Inputs
     ------
@@ -97,8 +100,9 @@ def inference(model, X):
 
     return preds
 
+
 def save_model(filename, file):
-    """ Saves model or encoders as a pickle file to model folder.
+    """Saves model or encoders as a pickle file to model folder.
 
     Inputs
     ------
@@ -108,12 +112,13 @@ def save_model(filename, file):
         file to be saved as pickle (either model or encoder)
     """
 
-    path = os.path.join('starter/model', filename)
-    with open(path, 'wb') as save_file:
+    path = os.path.join("starter/model", filename)
+    with open(path, "wb") as save_file:
         pickle.dump(file, save_file)
 
+
 def calculate_performance_slicing(df, feature, model, encoder, lb):
-    """ Calculates performance metrics on slices of categorical features.
+    """Calculates performance metrics on slices of categorical features.
 
     Inputs
     ------
@@ -129,14 +134,19 @@ def calculate_performance_slicing(df, feature, model, encoder, lb):
         Label Binarizer
     """
 
-    print(f'Feature: {feature}', '\n')
-    with open(f'starter/screenshots/slice_output_{feature}.txt','w') as f:
+    print(f"Feature: {feature}", "\n")
+    with open(f"starter/screenshots/slice_output_{feature}.txt", "w") as f:
         for value in df[feature].unique():
-            df_temp = df[df[feature]==value]
+            df_temp = df[df[feature] == value]
             _, test = train_test_split(df_temp, test_size=0.20)
 
             X_test, y_test, encoder, lb = process_data(
-                test, categorical_features=cat_features, label="salary", training=False, encoder=encoder, lb=lb
+                test,
+                categorical_features=cat_features,
+                label="salary",
+                training=False,
+                encoder=encoder,
+                lb=lb,
             )
 
             # Calculate predictions for X_test
@@ -145,11 +155,17 @@ def calculate_performance_slicing(df, feature, model, encoder, lb):
             # Calculate performance metrics for the model
             precision, recall, fbeta = compute_model_metrics(y_test, preds)
 
-            print(f'Precision for {value}: {precision}')
-            print(f'Recall for {value}: {recall}')
-            print(f'Fbeta for {value}: {fbeta}')
+            print(f"Precision for {value}: {precision}")
+            print(f"Recall for {value}: {recall}")
+            print(f"Fbeta for {value}: {fbeta}")
 
             # save to a txt file
-            lines = [f'Feature: {feature}','\n', f'Precision for {value}: {precision}','\n' f'Recall for {value}: {recall}','\n' f'Fbeta for {value}: {fbeta}']
-            
+            lines = [
+                f"Feature: {feature}",
+                "\n",
+                f"Precision for {value}: {precision}",
+                "\n" f"Recall for {value}: {recall}",
+                "\n" f"Fbeta for {value}: {fbeta}",
+            ]
+
             f.writelines(lines)
