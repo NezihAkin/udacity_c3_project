@@ -1,4 +1,3 @@
-files: ^starter/
 repos:
   - repo: local
     hooks:
