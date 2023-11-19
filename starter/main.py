@@ -68,6 +68,6 @@ async def inference(data: Data):
     )
 
     # Getting the prediction from the Random Forest Model
-    pred = model.predict(X)[0]
+    pred = model.predict(X)
 
     return pred

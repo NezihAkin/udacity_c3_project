@@ -1,3 +1,4 @@
+name: udacity_c3_project
 channels:
   - conda-forge
   - defaults
