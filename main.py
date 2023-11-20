@@ -9,12 +9,12 @@ from starter.ml.data import process_data
 cat_features = [
     "workclass",
     "education",
-    "marital_status",
+    "marital-status",
     "occupation",
     "relationship",
     "race",
     "sex",
-    "native_country",
+    "native-country",
 ]
 
 # Load the trained model and encoder
@@ -61,10 +61,10 @@ async def welcome_intent():
 @app.post("/inference")
 async def inference(data: Data):
     # Converting input data into Pandas DataFrame
-    input_df = pd.DataFrame([data.dict()])
+    input_df = pd.DataFrame([data.dict(by_alias=True)], index=[0])
 
     X, _, _, _ = process_data(
-        input_df, categorical_features=cat_features, training=False, encoder=encoder
+        input_df, categorical_features=cat_features, label=None, training=False, encoder=encoder, lb=None
     )
 
     # Getting the prediction from the Random Forest Model
