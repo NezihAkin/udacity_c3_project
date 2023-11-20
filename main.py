@@ -69,10 +69,12 @@ async def inference(data: Data):
     X, _, _, _ = process_data(
         input_df, categorical_features=cat_features, label=None, training=False, encoder=encoder, lb=None
     )
-    print(X)
 
     # Getting the prediction from the Random Forest Model
     pred = model.predict(X)
-    print(pred)
+    if pred.tolist()[0] == 0:
+        pred_label = "<=50K"
+    else:
+        pred_label = ">50K"
 
-    return pred.tolist()[0]
+    return {"Prediction": pred_label}

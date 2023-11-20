@@ -1,4 +1,6 @@
 # Script to train machine learning model.
+import os
+
 import pandas as pd
 from ml.data import process_data
 from ml.model import (
@@ -11,10 +13,10 @@ from ml.model import (
 from sklearn.model_selection import train_test_split
 
 # Get the path to the census dataset
-# current_dir = os.getcwd()
-# data_path = os.path.join(current_dir, '../data/census.csv')
+current_dir = os.getcwd()
+data_path = os.path.join(current_dir, "../data/census.csv")
 # Load in the dataset
-data = pd.read_csv("starter/data/census.csv")
+data = pd.read_csv(data_path)
 
 # Optional enhancement, use K-fold cross validation instead of a train-test split.
 train, test = train_test_split(data, test_size=0.20)

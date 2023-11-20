@@ -112,7 +112,7 @@ def save_model(filename, file):
         file to be saved as pickle (either model or encoder)
     """
 
-    path = os.path.join("starter/model", filename)
+    path = os.path.join("../model", filename)
     with open(path, "wb") as save_file:
         pickle.dump(file, save_file)
 
@@ -135,7 +135,7 @@ def calculate_performance_slicing(df, feature, model, encoder, lb):
     """
 
     print(f"Feature: {feature}", "\n")
-    with open(f"starter/screenshots/slice_output_{feature}.txt", "w") as f:
+    with open(f"../screenshots/slice_output_{feature}.txt", "w") as f:
         for value in df[feature].unique():
             df_temp = df[df[feature] == value]
             _, test = train_test_split(df_temp, test_size=0.20)
