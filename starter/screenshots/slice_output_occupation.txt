@@ -1,43 +1,43 @@
 Feature: occupation
-Precision for Adm-clerical: 0.6086956521739131
-Recall for Adm-clerical: 0.3218390804597701
-Fbeta for Adm-clerical: 0.42105263157894735Feature: occupation
-Precision for Exec-managerial: 0.8606811145510835
-Recall for Exec-managerial: 0.7183462532299741
-Fbeta for Exec-managerial: 0.7830985915492958Feature: occupation
-Precision for Handlers-cleaners: 0.5
+Precision for Adm-clerical: 0.7954545454545454
+Recall for Adm-clerical: 0.3211009174311927
+Fbeta for Adm-clerical: 0.45751633986928103Feature: occupation
+Precision for Exec-managerial: 0.8716417910447761
+Recall for Exec-managerial: 0.7525773195876289
+Fbeta for Exec-managerial: 0.8077455048409404Feature: occupation
+Precision for Handlers-cleaners: 0.5714285714285714
 Recall for Handlers-cleaners: 0.25
-Fbeta for Handlers-cleaners: 0.3333333333333333Feature: occupation
-Precision for Prof-specialty: 0.8156424581005587
-Recall for Prof-specialty: 0.7684210526315789
-Fbeta for Prof-specialty: 0.7913279132791328Feature: occupation
-Precision for Other-service: 0.6666666666666666
-Recall for Other-service: 0.125
-Fbeta for Other-service: 0.21052631578947367Feature: occupation
-Precision for Sales: 0.7538461538461538
-Recall for Sales: 0.5104166666666666
-Fbeta for Sales: 0.6086956521739131Feature: occupation
-Precision for Craft-repair: 0.75
-Recall for Craft-repair: 0.24615384615384617
-Fbeta for Craft-repair: 0.3706563706563707Feature: occupation
-Precision for Transport-moving: 0.8947368421052632
-Recall for Transport-moving: 0.2463768115942029
-Fbeta for Transport-moving: 0.38636363636363635Feature: occupation
-Precision for Farming-fishing: 0.5
-Recall for Farming-fishing: 0.3076923076923077
-Fbeta for Farming-fishing: 0.380952380952381Feature: occupation
-Precision for Machine-op-inspct: 0.9166666666666666
-Recall for Machine-op-inspct: 0.2391304347826087
-Fbeta for Machine-op-inspct: 0.3793103448275862Feature: occupation
-Precision for Tech-support: 0.9310344827586207
-Recall for Tech-support: 0.4576271186440678
-Fbeta for Tech-support: 0.6136363636363636Feature: occupation
-Precision for ?: 0.6521739130434783
-Recall for ?: 0.4838709677419355
-Fbeta for ?: 0.5555555555555556Feature: occupation
-Precision for Protective-serv: 0.6521739130434783
-Recall for Protective-serv: 0.4166666666666667
-Fbeta for Protective-serv: 0.5084745762711865Feature: occupation
+Fbeta for Handlers-cleaners: 0.34782608695652173Feature: occupation
+Precision for Prof-specialty: 0.8236994219653179
+Recall for Prof-specialty: 0.7960893854748603
+Fbeta for Prof-specialty: 0.8096590909090909Feature: occupation
+Precision for Other-service: 1.0
+Recall for Other-service: 0.17857142857142858
+Fbeta for Other-service: 0.30303030303030304Feature: occupation
+Precision for Sales: 0.7543859649122807
+Recall for Sales: 0.455026455026455
+Fbeta for Sales: 0.5676567656765676Feature: occupation
+Precision for Craft-repair: 0.8076923076923077
+Recall for Craft-repair: 0.21212121212121213
+Fbeta for Craft-repair: 0.33599999999999997Feature: occupation
+Precision for Transport-moving: 0.9375
+Recall for Transport-moving: 0.22388059701492538
+Fbeta for Transport-moving: 0.3614457831325301Feature: occupation
+Precision for Farming-fishing: 0.7692307692307693
+Recall for Farming-fishing: 0.4
+Fbeta for Farming-fishing: 0.5263157894736842Feature: occupation
+Precision for Machine-op-inspct: 0.8333333333333334
+Recall for Machine-op-inspct: 0.2727272727272727
+Fbeta for Machine-op-inspct: 0.4109589041095891Feature: occupation
+Precision for Tech-support: 0.9615384615384616
+Recall for Tech-support: 0.423728813559322
+Fbeta for Tech-support: 0.5882352941176471Feature: occupation
+Precision for ?: 0.7333333333333333
+Recall for ?: 0.2894736842105263
+Fbeta for ?: 0.4150943396226416Feature: occupation
+Precision for Protective-serv: 0.8235294117647058
+Recall for Protective-serv: 0.32558139534883723
+Fbeta for Protective-serv: 0.46666666666666673Feature: occupation
 Precision for Armed-Forces: 1.0
 Recall for Armed-Forces: 1.0
 Fbeta for Armed-Forces: 1.0Feature: occupation

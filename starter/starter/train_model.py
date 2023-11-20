@@ -54,6 +54,10 @@ save_model(model_filename, model)
 encoder_filename = "encoder.pkl"
 save_model(encoder_filename, encoder)
 
+# Save trained Label Binarizer
+lb_filename = "lb.pkl"
+save_model(lb_filename, lb)
+
 # Calculate predictions for X_test
 preds = inference(model, X_test)
 
