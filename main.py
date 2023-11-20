@@ -1,4 +1,7 @@
+import json
 import pickle
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 
 import pandas as pd
 from fastapi import FastAPI
@@ -61,13 +64,15 @@ async def welcome_intent():
 @app.post("/inference")
 async def inference(data: Data):
     # Converting input data into Pandas DataFrame
-    input_df = pd.DataFrame([data.dict(by_alias=True)], index=[0])
+    input_df = pd.json_normalize([jsonable_encoder(data)])
 
     X, _, _, _ = process_data(
         input_df, categorical_features=cat_features, label=None, training=False, encoder=encoder, lb=None
     )
+    print(X)
 
     # Getting the prediction from the Random Forest Model
     pred = model.predict(X)
+    print(pred)
 
-    return pred
+    return pred.tolist()[0]
