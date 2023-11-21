@@ -1,43 +1,43 @@
 Feature: occupation
-Precision for Adm-clerical: 0.8780487804878049
-Recall for Adm-clerical: 0.32432432432432434
-Fbeta for Adm-clerical: 0.4736842105263158Feature: occupation
-Precision for Exec-managerial: 0.8422619047619048
-Recall for Exec-managerial: 0.7201017811704835
-Fbeta for Exec-managerial: 0.776406035665295Feature: occupation
-Precision for Handlers-cleaners: 0.6666666666666666
-Recall for Handlers-cleaners: 0.2
-Fbeta for Handlers-cleaners: 0.30769230769230765Feature: occupation
-Precision for Prof-specialty: 0.811046511627907
-Recall for Prof-specialty: 0.754054054054054
-Fbeta for Prof-specialty: 0.7815126050420168Feature: occupation
+Precision for Adm-clerical: 0.7954545454545454
+Recall for Adm-clerical: 0.36082474226804123
+Fbeta for Adm-clerical: 0.4964539007092198Feature: occupation
+Precision for Exec-managerial: 0.8731117824773413
+Recall for Exec-managerial: 0.7279596977329975
+Fbeta for Exec-managerial: 0.793956043956044Feature: occupation
+Precision for Handlers-cleaners: 0.625
+Recall for Handlers-cleaners: 0.3125
+Fbeta for Handlers-cleaners: 0.4166666666666667Feature: occupation
+Precision for Prof-specialty: 0.8136986301369863
+Recall for Prof-specialty: 0.7877984084880637
+Fbeta for Prof-specialty: 0.8005390835579516Feature: occupation
 Precision for Other-service: 1.0
-Recall for Other-service: 0.14285714285714285
-Fbeta for Other-service: 0.25Feature: occupation
-Precision for Sales: 0.7686567164179104
-Recall for Sales: 0.533678756476684
-Fbeta for Sales: 0.6299694189602446Feature: occupation
-Precision for Craft-repair: 0.8285714285714286
-Recall for Craft-repair: 0.32222222222222224
-Fbeta for Craft-repair: 0.4640000000000001Feature: occupation
-Precision for Transport-moving: 0.6190476190476191
-Recall for Transport-moving: 0.22807017543859648
-Fbeta for Transport-moving: 0.3333333333333333Feature: occupation
-Precision for Farming-fishing: 0.8571428571428571
-Recall for Farming-fishing: 0.35294117647058826
-Fbeta for Farming-fishing: 0.5Feature: occupation
-Precision for Machine-op-inspct: 0.8333333333333334
-Recall for Machine-op-inspct: 0.2631578947368421
-Fbeta for Machine-op-inspct: 0.39999999999999997Feature: occupation
-Precision for Tech-support: 0.8333333333333334
-Recall for Tech-support: 0.35714285714285715
-Fbeta for Tech-support: 0.5Feature: occupation
-Precision for ?: 0.7333333333333333
-Recall for ?: 0.55
-Fbeta for ?: 0.6285714285714286Feature: occupation
-Precision for Protective-serv: 0.8666666666666667
-Recall for Protective-serv: 0.325
-Fbeta for Protective-serv: 0.4727272727272728Feature: occupation
+Recall for Other-service: 0.043478260869565216
+Fbeta for Other-service: 0.08333333333333333Feature: occupation
+Precision for Sales: 0.8120805369127517
+Recall for Sales: 0.5789473684210527
+Fbeta for Sales: 0.6759776536312849Feature: occupation
+Precision for Craft-repair: 0.7419354838709677
+Recall for Craft-repair: 0.24731182795698925
+Fbeta for Craft-repair: 0.3709677419354839Feature: occupation
+Precision for Transport-moving: 0.7333333333333333
+Recall for Transport-moving: 0.1896551724137931
+Fbeta for Transport-moving: 0.30136986301369867Feature: occupation
+Precision for Farming-fishing: 0.6842105263157895
+Recall for Farming-fishing: 0.41935483870967744
+Fbeta for Farming-fishing: 0.5200000000000001Feature: occupation
+Precision for Machine-op-inspct: 0.7142857142857143
+Recall for Machine-op-inspct: 0.17857142857142858
+Fbeta for Machine-op-inspct: 0.2857142857142857Feature: occupation
+Precision for Tech-support: 0.8636363636363636
+Recall for Tech-support: 0.3333333333333333
+Fbeta for Tech-support: 0.481012658227848Feature: occupation
+Precision for ?: 0.6470588235294118
+Recall for ?: 0.3548387096774194
+Fbeta for ?: 0.4583333333333333Feature: occupation
+Precision for Protective-serv: 0.85
+Recall for Protective-serv: 0.38636363636363635
+Fbeta for Protective-serv: 0.53125Feature: occupation
 Precision for Armed-Forces: 1.0
 Recall for Armed-Forces: 1.0
 Fbeta for Armed-Forces: 1.0Feature: occupation
